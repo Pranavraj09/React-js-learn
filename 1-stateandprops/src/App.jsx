@@ -22,6 +22,10 @@ function App() {
     <button className='btn btn-primary'onClick={()=> setCount(count+1)}>Increase count here</button>
     {/* these are the handleclick event that can be used for usestate */}
     {/* <button className='btn btn-primary' onClick={handleClick}>increase count</button> */}
+    {/* for decrease that can that decerease the value bu sing usestate */}
+    <button className="btn btn-warning mx-2"onClick={()=>setCount(count-1)}>Decrease the value here</button>
+    {/* for reset the value  */}
+    <button className="btn btn-danger mx-2" onClick={()=>setCount(0)}>Reset</button>
     </>
   )
 }
