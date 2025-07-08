@@ -32,7 +32,7 @@ function App() {
 
 export default App
 // hooks:special type of predefined functions that allow us to use state and other React features in functional components.
-// states:it is an object ,we have to pass variable(state),function(setstate),these setstate()ill be help to update state value dynamically
+// states:it is an object ,we have to pass variable(state),function(setstate),these setState()ill be help to update state value dynamically
 // useState();
 // count,setCount:
 // theme,setTheme:
