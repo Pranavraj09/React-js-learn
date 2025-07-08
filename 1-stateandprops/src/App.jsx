@@ -17,6 +17,7 @@ function App() {
     <>
     <h2>Introduction to state and props</h2>
     <p>Count here is:{count}</p>
+     <hr />
     {/* these can be used by usestate count,and setcount method */}
     <button className='btn btn-primary'onClick={()=> setCount(count+1)}>Increase count here</button>
     {/* these are the handleclick event that can be used for usestate */}
@@ -24,7 +25,8 @@ function App() {
     {/* for decrease that can that decerease the value bu sing usestate */}
     {/* making the project that can be the count value is not negatively that the value is minimum 0 not negative value
     condition are
-    if count is 0 then decrease button is remove */}
+    if count is 0 then decrease button is remove 
+    condiional rendering:component will render while certain condition met*/}
     {count>0 && <button className="btn btn-warning mx-2"onClick={()=>setCount(count-1)}>Decrease the value here</button>}
     {/* for reset the value  */}
     <button className="btn btn-danger mx-2" onClick={()=>setCount(0)}>Reset</button>
@@ -40,6 +42,7 @@ export default App
 // count,setCount:
 // theme,setTheme:
 // props:props are used to pass data from parent component to child component.
+// in that mainly used conditional rendering and ternary operator(line od code is minimum)
 
 // simple example of usestate without any complexity that can be make increase and decrease the value of count and reset the value of count 
 
