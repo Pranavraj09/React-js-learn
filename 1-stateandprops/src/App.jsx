@@ -26,7 +26,7 @@ function App() {
     {/* making the project that can be the count value is not negatively that the value is minimum 0 not negative value
     condition are
     if count is 0 then decrease button is remove 
-    condiional rendering:component will render while certain condition met*/}
+    condiional rendering:component will render while certain condition met,showing different UI element (or holding then) based on some condition */}
     {count>0 && <button className="btn btn-warning mx-2"onClick={()=>setCount(count-1)}>Decrease the value here</button>}
     {/* for reset the value  */}
     <button className="btn btn-danger mx-2" onClick={()=>setCount(0)}>Reset</button>
