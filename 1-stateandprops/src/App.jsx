@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Home from './home/Home'
+import Navbar from './navbar/Navbar'
 
 function App() {
   // let count = 0;
@@ -17,23 +18,25 @@ function App() {
   return ( 
     <>
     <h2 className='text-center bg-dark text-light p-4'>Introduction to state and props</h2>
-    <div className='container p-3'>
-      <h1 className='text-center'>App component</h1>
-    <p className='bg-secondary text-light'>Count here is:{count}</p>
+    <Navbar navCount={count} navSetCount={setCount}/>
+    <h1 className='text-center'>App component</h1>
+    <div className='container p-3 bg-secondary'>
+    <p className='text-light'>Count here is:{count}</p>
      <hr />
     {/* these can be used by usestate count,and setcount method */}
     <button className='btn btn-primary'onClick={()=> setCount(count+1)}>Increase count here</button>
     {/* these are the handleclick event that can be used for usestate */}
     {/* <button className='btn btn-primary' onClick={handleClick}>increase count</button> */}
-    {/* for decrease that can that decerease the value bu sing usestate */}
+    {/* for decrease that can that decerease the value by using usestate */}
     {/* making the project that can be the count value is not negatively that the value is minimum 0 not negative value
     condition are
     if count is 0 then decrease button is remove 
     condiional rendering:component will render while certain condition met,showing different UI element (or holding then) based on some condition */}
     {/* {count>0 && <button className="btn btn-warning mx-2"onClick={()=>setCount(count-1)}>Decrease the value here</button>} */}
     {/* for reset the value  */}
-    <button className="btn btn-danger mx-2" onClick={()=>setCount(0)}>Reset</button>
+    {/* <button className="btn btn-danger mx-2" onClick={()=>setCount(0)}>Reset</button> */}
     </div>
+    {/* Destructuring in javascript play a role to perform it*/}
     <Home appCount={count} setappCount={setCount}/>
     {/* this is the home component that can be used for the home page */}
     </>
