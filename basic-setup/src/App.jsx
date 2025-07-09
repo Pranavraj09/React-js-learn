@@ -1,35 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import { useState } from 'react';
 import './App.css'
+import Mode from './mode/Mode';
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const[theme, setTheme] = useState('light');
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+  };
+ 
+  const appStyle = {
+    backgroundColor: theme === 'light' ? '#fff' : '#222',
+    color: theme === 'light' ? '#000' : '#fff',
+    height: '100vh',
+    transition: 'all 0.3s ease',
+  };
   return (
     <>
-    <h1>Hello React</h1>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <h1>Task: Toggle Light/Dark Mode using State&Props</h1>
+    <div style={appStyle} className="container">
+   <h1>welcome to {theme === 'light' ? 'light': 'Dark'} mode</h1>
+   <Mode modeTheme={theme} modetoggleTheme={toggleTheme}/>
+   </div>
+       </>
   )
 }
 
