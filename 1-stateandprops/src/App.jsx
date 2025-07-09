@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Home from './home/Home'
 
 function App() {
   // let count = 0;
@@ -15,8 +16,10 @@ function App() {
 
   return ( 
     <>
-    <h2>Introduction to state and props</h2>
-    <p>Count here is:{count}</p>
+    <h2 className='text-center bg-dark text-light p-4'>Introduction to state and props</h2>
+    <div className='container p-3'>
+      <h1 className='text-center'>App component</h1>
+    <p className='bg-secondary text-light'>Count here is:{count}</p>
      <hr />
     {/* these can be used by usestate count,and setcount method */}
     <button className='btn btn-primary'onClick={()=> setCount(count+1)}>Increase count here</button>
@@ -27,9 +30,12 @@ function App() {
     condition are
     if count is 0 then decrease button is remove 
     condiional rendering:component will render while certain condition met,showing different UI element (or holding then) based on some condition */}
-    {count>0 && <button className="btn btn-warning mx-2"onClick={()=>setCount(count-1)}>Decrease the value here</button>}
+    {/* {count>0 && <button className="btn btn-warning mx-2"onClick={()=>setCount(count-1)}>Decrease the value here</button>} */}
     {/* for reset the value  */}
     <button className="btn btn-danger mx-2" onClick={()=>setCount(0)}>Reset</button>
+    </div>
+    <Home appCount={count} setappCount={setCount}/>
+    {/* this is the home component that can be used for the home page */}
     </>
   )
 }
