@@ -12,7 +12,7 @@ export default function Mode({ modeTheme, modetoggleTheme }) {
       }}
     >
       <span>My App</span>
-      <button onClick={modetoggleTheme}>
+      <button className='btn btn-info'onClick={modetoggleTheme}>
         Switch to {modeTheme === 'light' ? 'Dark' : 'Light'} Mode
       </button>
 
