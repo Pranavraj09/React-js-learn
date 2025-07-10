@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function Header() {
+export default function Header({heading}) {
   return (
     <div>
-      <h1 className='text-light text-center bg-dark'>hello header</h1>
+      <h1 className='text-light text-center bg-dark'>welcome to {heading}</h1>
+     
     </div>
   )
 }
